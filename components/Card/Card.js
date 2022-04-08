@@ -10,6 +10,7 @@ export default function Card({ name, phone, email, image, id }) {
           src={image.url}
           alt={image.alt}
           className={styles["card-img"]}
+          layout="fill"
         ></Image>
       </div>
       <div>
