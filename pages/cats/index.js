@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Card from "../../components/Card/Card";
-import Nav from "../../components/Nav/Nav";
+import DefaultLayout from "../../layouts/Default";
 
 export default function Index() {
   const [cats, setCats] = useState([]);
@@ -17,26 +17,27 @@ export default function Index() {
 
   return (
     <>
-      <Nav />
-      <div className="container mt-5">
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-          }}
-        >
-          {cats.map((cat, i) => (
-            <Card
-              key={i}
-              name={cat.name}
-              id={cat.id}
-              phone={cat.phone}
-              email={cat.email}
-              image={cat.image}
-            />
-          ))}
+      <DefaultLayout>
+        <div className="container mt-5">
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+            }}
+          >
+            {cats.map((cat, i) => (
+              <Card
+                key={i}
+                name={cat.name}
+                id={cat.id}
+                phone={cat.phone}
+                email={cat.email}
+                image={cat.image}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </DefaultLayout>
     </>
   );
 }

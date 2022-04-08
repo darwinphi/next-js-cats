@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Nav from "../components/Nav/Nav";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
+import DefaultLayout from "../layouts/Default";
 
 export default function Home() {
   return (
@@ -14,8 +14,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <Nav />
-        <Jumbotron />
+        <DefaultLayout>
+          <Jumbotron />
+        </DefaultLayout>
       </main>
     </div>
   );
