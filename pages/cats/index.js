@@ -16,19 +16,27 @@ export default function Index() {
   }, []);
 
   return (
-    <div>
+    <>
       <Nav />
-
-      {cats.map((cat, i) => (
-        <Card
-          key={i}
-          name={cat.name}
-          id={cat.id}
-          phone={cat.phone}
-          email={cat.email}
-          image={cat.image}
-        />
-      ))}
-    </div>
+      <div className="container mt-5">
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+          }}
+        >
+          {cats.map((cat, i) => (
+            <Card
+              key={i}
+              name={cat.name}
+              id={cat.id}
+              phone={cat.phone}
+              email={cat.email}
+              image={cat.image}
+            />
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
